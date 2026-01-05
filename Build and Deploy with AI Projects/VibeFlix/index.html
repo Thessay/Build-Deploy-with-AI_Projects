@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ThessFlix</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Top Nav -->
+  <header id="navBar">
+    <div id="navLeft">
+      <div id="brandLogo" aria-label="VibeFlix logo">ThessFlix</div>
+
+      <nav id="navLinks" aria-label="Primary navigation">
+        <a id="navHomeLink" href="#">Home</a>
+        <a id="navSeriesLink" href="#">TV Shows</a>
+        <a id="navMoviesLink" href="#">Movies</a>
+        <a id="navNewLink" href="#">New & Popular</a>
+        <a id="navMyListLink" href="#">My List</a>
+      </nav>
+    </div>
+
+    <div id="navRight">
+      <div id="searchWrap">
+        <input id="searchInput" type="text" placeholder="Titles, people, genres" />
+        <button id="searchBtn" type="button" aria-label="Search">Search</button>
+      </div>
+
+      <button id="themeToggleBtn" type="button" aria-label="Toggle theme">🌙</button>
+      <button id="profileBtn" type="button" aria-label="Profile">
+        <span id="profileAvatar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero">
+    <div id="heroBackdrop"></div>
+
+    <div id="heroContent">
+      <p id="heroTag">#1 in Nigeria Today</p>
+      <h1 id="heroTitle">Midnight Protocol</h1>
+      <p id="heroDesc">
+        A covert analyst uncovers a hidden network—every clue pushes her deeper into a conspiracy she can’t unsee.
+      </p>
+
+      <div id="heroActions">
+        <button id="heroPlayBtn" type="button">▶ Play</button>
+        <button id="heroInfoBtn" type="button">ℹ More Info</button>
+      </div>
+
+      <p id="heroMeta">Action • Thriller • 2026 • 1 Season</p>
+    </div>
+  </section>
+
+  <!-- Rows -->
+  <main id="rowsRoot">
+    <section id="row1" class="rowSection">
+      <div class="rowHeader">
+        <h2 id="row1Title" class="rowTitle">Trending Now</h2>
+        <div class="rowControls">
+          <button id="row1PrevBtn" class="rowNavBtn" type="button" aria-label="Scroll left">‹</button>
+          <button id="row1NextBtn" class="rowNavBtn" type="button" aria-label="Scroll right">›</button>
+        </div>
+      </div>
+      <div id="row1Rail" class="rowRail" aria-label="Trending rail"></div>
+    </section>
+
+    <section id="row2" class="rowSection">
+      <div class="rowHeader">
+        <h2 id="row2Title" class="rowTitle">Top Picks For You</h2>
+        <div class="rowControls">
+          <button id="row2PrevBtn" class="rowNavBtn" type="button" aria-label="Scroll left">‹</button>
+          <button id="row2NextBtn" class="rowNavBtn" type="button" aria-label="Scroll right">›</button>
+        </div>
+      </div>
+      <div id="row2Rail" class="rowRail" aria-label="Top picks rail"></div>
+    </section>
+
+    <section id="row3" class="rowSection">
+      <div class="rowHeader">
+        <h2 id="row3Title" class="rowTitle">Popular on VibeFlix</h2>
+        <div class="rowControls">
+          <button id="row3PrevBtn" class="rowNavBtn" type="button" aria-label="Scroll left">‹</button>
+          <button id="row3NextBtn" class="rowNavBtn" type="button" aria-label="Scroll right">›</button>
+        </div>
+      </div>
+      <div id="row3Rail" class="rowRail" aria-label="Popular rail"></div>
+    </section>
+  </main>
+
+  <!-- Lightweight modal (for "More Info") -->
+  <div id="modalOverlay" aria-hidden="true">
+    <div id="modalCard" role="dialog" aria-modal="true" aria-label="Movie info">
+      <button id="modalCloseBtn" type="button" aria-label="Close">✕</button>
+      <div id="modalBody">
+        <h3 id="modalTitle">Title</h3>
+        <p id="modalText">Description</p>
+        <div id="modalMeta"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

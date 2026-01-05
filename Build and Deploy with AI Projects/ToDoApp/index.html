@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sticky Todo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main id="app">
+    <header id="header">
+      <div id="headerTop">
+        <h1 id="title">Sticky Todo</h1>
+
+        <button id="themeToggleBtn" type="button" aria-label="Toggle dark mode">
+          🌙 Dark
+        </button>
+      </div>
+
+      <form id="todoForm" autocomplete="off">
+        <input
+          id="todoInput"
+          type="text"
+          placeholder="Add a task… (Press Enter)"
+          maxlength="140"
+          required
+        />
+        <button id="addBtn" type="submit">Add</button>
+      </form>
+
+      <div id="toolbar">
+        <div id="filters" role="tablist" aria-label="Todo filters">
+          <button id="filterAllBtn" class="filterBtn is-active" type="button" data-filter="all">All</button>
+          <button id="filterActiveBtn" class="filterBtn" type="button" data-filter="active">Active</button>
+          <button id="filterCompletedBtn" class="filterBtn" type="button" data-filter="completed">Completed</button>
+        </div>
+
+        <div id="actions">
+          <span id="statsText">0 tasks</span>
+          <button id="clearCompletedBtn" type="button" class="ghostBtn">
+            Clear completed
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section id="content">
+      <ul id="todoList" aria-label="Todo list"></ul>
+      <p id="emptyState">No tasks yet. Add one above ✨</p>
+    </section>
+
+    <footer id="footer">
+      <span id="hintText">
+        Tip: Click a note to select it, then press <kbd>Delete</kbd> to remove.
+      </span>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
